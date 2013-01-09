@@ -11,46 +11,81 @@
 
 
 @implementation Ball {
+	CGPoint _startPoint;
 	CADisplayLink *_displayLink;
+	CGFloat _velocityX;
+	CGFloat _velocityY;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
 		self.layer.cornerRadius = 10;
-		_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(ballMoving:)];
 		
+		_startPoint = self.center;
+		
+		_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(ballMoving:)];
+		_displayLink.paused = YES;
+		[_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+		_displayLink.frameInterval = 5;
+		
+		// We want only a 45 grad left and right
+		double startDirection = (arc4random() % 90) + 45;
+		startDirection = startDirection * 3.14 / 180;
+		
+		NSLog(@"start = %f", startDirection);
+		NSLog(@"x = sin %lf", cos(startDirection));
+		NSLog(@"y = cos %lf", sin(startDirection));
+		
+		_velocityX = cos(startDirection) * 40.0;
+		_velocityY = sin(startDirection) * 40.0;
+		
+		NSLog(@"init velocity: %f %f", _velocityX, _velocityY);
 	}
 	
 	return self;
 }
 
 -(void)ballMoving:(CADisplayLink *)displayLink {
-	CGFloat x = self.center.x + 1;
-	CGFloat y = self.center.y - 1;
+	CGFloat x = self.center.x + _velocityX * displayLink.duration * displayLink.frameInterval;
+	CGFloat y = self.center.y - _velocityY * displayLink.duration * displayLink.frameInterval;
 	
-	NSLog(@"Superview: %@, Self: %@", NSStringFromCGRect(self.superview.bounds), NSStringFromCGRect(self.frame));
+	CGRect ballRect = self.frame;
+	CGRect boxRect = self.superview.bounds;
 	
-	
-	if ( ! CGRectIntersectsRect( self.superview.bounds, self.frame ) ) {
-		NSLog(@"Intersection: %@", NSStringFromCGRect( CGRectIntersection( self.superview.bounds, self.frame ) ));
-		[self stop];
+	if (CGRectGetMinX(ballRect) < CGRectGetMinX(boxRect)) {
+		_velocityX = -_velocityX;
 	}
-
+	if (CGRectGetMaxX(ballRect) > CGRectGetMaxX(boxRect)) {
+		_velocityX = -_velocityX;
+	}
+	if (CGRectGetMinY(ballRect) < CGRectGetMinY(boxRect)) {
+		_velocityY = -_velocityY;
+	}
+	if (CGRectGetMaxY(ballRect) < CGRectGetMaxY(boxRect)) {
+		_velocityY = -_velocityY;
+	}
+	
 	self.center = CGPointMake(x, y);
 }
+		
+		
 
 - (void) start {
-	[_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+	NSLog(@"Start game");
+	_displayLink.paused = NO;
 }
 
 - (void) pause {
-	[_displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+	NSLog(@"Pause game");
+	_displayLink.paused = YES;
+//	[_displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void) stop {
 	[self pause];
-	// TODO reset position
+	NSLog(@"Stop game");
+	self.center = _startPoint;
 }
 
 @end

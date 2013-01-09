@@ -17,5 +17,6 @@
 
 - (IBAction)ballTapped:(UITapGestureRecognizer *)sender;
 - (IBAction)handlerMoved:(UIPanGestureRecognizer *)sender;
+- (IBAction)stopGame:(UITapGestureRecognizer *)sender;
 
 @end

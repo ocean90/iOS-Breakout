@@ -86,4 +86,8 @@
     sender.view.center = CGPointMake(x, y);
 }
 
+- (IBAction)stopGame:(UITapGestureRecognizer *)sender {
+	[self.ball stop];
+}
+
 @end
