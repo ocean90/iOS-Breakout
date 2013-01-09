@@ -64,9 +64,6 @@
 	
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-
-}
 
 - (IBAction)ballTapped:(UITapGestureRecognizer *)sender {
 	_displayLink.paused = NO;

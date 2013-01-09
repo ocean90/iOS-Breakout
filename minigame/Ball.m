@@ -14,6 +14,7 @@
 	CGPoint _startPoint;
 	CGFloat _velocityX;
 	CGFloat _velocityY;
+	CADisplayLink *_displayLink;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -22,13 +23,15 @@
 		self.layer.cornerRadius = 10;
 		
 		_startPoint = self.center;
-		
 	}
 	
 	return self;
 }
 
 -(void)ballMoving:(CADisplayLink *)displayLink {
+	if ( _displayLink == nil )
+		_displayLink = displayLink;
+	
 	CGRect ballRect = self.frame;
 	CGRect boxRect = self.superview.bounds;
 
@@ -44,13 +47,11 @@
 		_velocityX = -_velocityX;
 	};
 
-	CGFloat x = _velocityX * displayLink.duration * displayLink.frameInterval;
-	CGFloat y = -_velocityY * displayLink.duration * displayLink.frameInterval;
+	CGFloat x = _velocityX * _displayLink.duration * _displayLink.frameInterval;
+	CGFloat y = -_velocityY * _displayLink.duration * _displayLink.frameInterval;
 	
 	self.frame = CGRectOffset(self.frame, x, y);
 }
-		
-		
 
 - (BOOL) checkTopCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
 	CGFloat point1 = CGRectGetMinY(rect1);
@@ -98,13 +99,14 @@
 
 - (void) pause {
 	NSLog(@"Pause game");
-//	[_displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+	_displayLink.paused = YES;
 }
 
 - (void) stop {
 	[self pause];
 	NSLog(@"Stop game");
 	self.center = _startPoint;
+	// TODO Handler zurücksetzen
 }
 
 @end
