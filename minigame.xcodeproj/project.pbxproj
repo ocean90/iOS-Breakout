@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59E22C1D169D6F720065655C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C1C169D6F720065655C /* UIKit.framework */; };
+		59E22C1F169D6F720065655C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C1E169D6F720065655C /* Foundation.framework */; };
+		59E22C21169D6F720065655C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C20169D6F720065655C /* CoreGraphics.framework */; };
+		59E22C27169D6F720065655C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C25169D6F720065655C /* InfoPlist.strings */; };
+		59E22C29169D6F720065655C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C28169D6F720065655C /* main.m */; };
+		59E22C2D169D6F720065655C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C2C169D6F720065655C /* AppDelegate.m */; };
+		59E22C2F169D6F720065655C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C2E169D6F720065655C /* Default.png */; };
+		59E22C31169D6F730065655C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C30169D6F730065655C /* Default@2x.png */; };
+		59E22C33169D6F730065655C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C32169D6F730065655C /* Default-568h@2x.png */; };
+		59E22C36169D6F730065655C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C34169D6F730065655C /* MainStoryboard.storyboard */; };
+		59E22C39169D6F730065655C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C38169D6F730065655C /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		59E22C18169D6F720065655C /* minigame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minigame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E22C1C169D6F720065655C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		59E22C1E169D6F720065655C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		59E22C20169D6F720065655C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		59E22C24169D6F720065655C /* minigame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "minigame-Info.plist"; sourceTree = "<group>"; };
+		59E22C26169D6F720065655C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		59E22C28169D6F720065655C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		59E22C2A169D6F720065655C /* minigame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "minigame-Prefix.pch"; sourceTree = "<group>"; };
+		59E22C2B169D6F720065655C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		59E22C2C169D6F720065655C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		59E22C2E169D6F720065655C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		59E22C30169D6F730065655C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		59E22C32169D6F730065655C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		59E22C35169D6F730065655C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		59E22C37169D6F730065655C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		59E22C38169D6F730065655C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59E22C15169D6F720065655C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E22C1D169D6F720065655C /* UIKit.framework in Frameworks */,
+				59E22C1F169D6F720065655C /* Foundation.framework in Frameworks */,
+				59E22C21169D6F720065655C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59E22C0D169D6F710065655C = {
+			isa = PBXGroup;
+			children = (
+				59E22C22169D6F720065655C /* minigame */,
+				59E22C1B169D6F720065655C /* Frameworks */,
+				59E22C19169D6F720065655C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59E22C19169D6F720065655C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59E22C18169D6F720065655C /* minigame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59E22C1B169D6F720065655C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59E22C1C169D6F720065655C /* UIKit.framework */,
+				59E22C1E169D6F720065655C /* Foundation.framework */,
+				59E22C20169D6F720065655C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59E22C22169D6F720065655C /* minigame */ = {
+			isa = PBXGroup;
+			children = (
+				59E22C2B169D6F720065655C /* AppDelegate.h */,
+				59E22C2C169D6F720065655C /* AppDelegate.m */,
+				59E22C34169D6F730065655C /* MainStoryboard.storyboard */,
+				59E22C37169D6F730065655C /* ViewController.h */,
+				59E22C38169D6F730065655C /* ViewController.m */,
+				59E22C23169D6F720065655C /* Supporting Files */,
+			);
+			path = minigame;
+			sourceTree = "<group>";
+		};
+		59E22C23169D6F720065655C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59E22C24169D6F720065655C /* minigame-Info.plist */,
+				59E22C25169D6F720065655C /* InfoPlist.strings */,
+				59E22C28169D6F720065655C /* main.m */,
+				59E22C2A169D6F720065655C /* minigame-Prefix.pch */,
+				59E22C2E169D6F720065655C /* Default.png */,
+				59E22C30169D6F730065655C /* Default@2x.png */,
+				59E22C32169D6F730065655C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59E22C17169D6F720065655C /* minigame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59E22C3C169D6F730065655C /* Build configuration list for PBXNativeTarget "minigame" */;
+			buildPhases = (
+				59E22C14169D6F720065655C /* Sources */,
+				59E22C15169D6F720065655C /* Frameworks */,
+				59E22C16169D6F720065655C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = minigame;
+			productName = minigame;
+			productReference = 59E22C18169D6F720065655C /* minigame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59E22C0F169D6F710065655C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = buenocode;
+			};
+			buildConfigurationList = 59E22C12169D6F710065655C /* Build configuration list for PBXProject "minigame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 59E22C0D169D6F710065655C;
+			productRefGroup = 59E22C19169D6F720065655C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59E22C17169D6F720065655C /* minigame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59E22C16169D6F720065655C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E22C27169D6F720065655C /* InfoPlist.strings in Resources */,
+				59E22C2F169D6F720065655C /* Default.png in Resources */,
+				59E22C31169D6F730065655C /* Default@2x.png in Resources */,
+				59E22C33169D6F730065655C /* Default-568h@2x.png in Resources */,
+				59E22C36169D6F730065655C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59E22C14169D6F720065655C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E22C29169D6F720065655C /* main.m in Sources */,
+				59E22C2D169D6F720065655C /* AppDelegate.m in Sources */,
+				59E22C39169D6F730065655C /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59E22C25169D6F720065655C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59E22C26169D6F720065655C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		59E22C34169D6F730065655C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59E22C35169D6F730065655C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59E22C3A169D6F730065655C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		59E22C3B169D6F730065655C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59E22C3D169D6F730065655C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "minigame/minigame-Prefix.pch";
+				INFOPLIST_FILE = "minigame/minigame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		59E22C3E169D6F730065655C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "minigame/minigame-Prefix.pch";
+				INFOPLIST_FILE = "minigame/minigame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59E22C12169D6F710065655C /* Build configuration list for PBXProject "minigame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59E22C3A169D6F730065655C /* Debug */,
+				59E22C3B169D6F730065655C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59E22C3C169D6F730065655C /* Build configuration list for PBXNativeTarget "minigame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59E22C3D169D6F730065655C /* Debug */,
+				59E22C3E169D6F730065655C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59E22C0F169D6F710065655C /* Project object */;
+}
