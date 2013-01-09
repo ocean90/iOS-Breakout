@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Block.h"
+#import "Ball.h"
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet Block *blocks;
+@property (weak, nonatomic) IBOutlet Ball *ball;
+
+- (IBAction)ballTapped:(UITapGestureRecognizer *)sender;
+- (IBAction)handlerMoved:(UIPanGestureRecognizer *)sender;
 
 @end

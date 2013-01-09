@@ -18,6 +18,9 @@
 		59E22C33169D6F730065655C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C32169D6F730065655C /* Default-568h@2x.png */; };
 		59E22C36169D6F730065655C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E22C34169D6F730065655C /* MainStoryboard.storyboard */; };
 		59E22C39169D6F730065655C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C38169D6F730065655C /* ViewController.m */; };
+		59E22C41169D6FDB0065655C /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C40169D6FDB0065655C /* Block.m */; };
+		59E22C43169D7FC70065655C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C42169D7FC70065655C /* QuartzCore.framework */; };
+		59E22C46169D81EB0065655C /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C45169D81EB0065655C /* Ball.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		59E22C35169D6F730065655C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		59E22C37169D6F730065655C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		59E22C38169D6F730065655C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		59E22C3F169D6FDB0065655C /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		59E22C40169D6FDB0065655C /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		59E22C42169D7FC70065655C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		59E22C44169D81EB0065655C /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		59E22C45169D81EB0065655C /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E22C43169D7FC70065655C /* QuartzCore.framework in Frameworks */,
 				59E22C1D169D6F720065655C /* UIKit.framework in Frameworks */,
 				59E22C1F169D6F720065655C /* Foundation.framework in Frameworks */,
 				59E22C21169D6F720065655C /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +65,7 @@
 		59E22C0D169D6F710065655C = {
 			isa = PBXGroup;
 			children = (
+				59E22C42169D7FC70065655C /* QuartzCore.framework */,
 				59E22C22169D6F720065655C /* minigame */,
 				59E22C1B169D6F720065655C /* Frameworks */,
 				59E22C19169D6F720065655C /* Products */,
@@ -85,9 +95,13 @@
 			children = (
 				59E22C2B169D6F720065655C /* AppDelegate.h */,
 				59E22C2C169D6F720065655C /* AppDelegate.m */,
-				59E22C34169D6F730065655C /* MainStoryboard.storyboard */,
+				59E22C3F169D6FDB0065655C /* Block.h */,
+				59E22C40169D6FDB0065655C /* Block.m */,
+				59E22C44169D81EB0065655C /* Ball.h */,
+				59E22C45169D81EB0065655C /* Ball.m */,
 				59E22C37169D6F730065655C /* ViewController.h */,
 				59E22C38169D6F730065655C /* ViewController.m */,
+				59E22C34169D6F730065655C /* MainStoryboard.storyboard */,
 				59E22C23169D6F720065655C /* Supporting Files */,
 			);
 			path = minigame;
@@ -176,6 +190,8 @@
 				59E22C29169D6F720065655C /* main.m in Sources */,
 				59E22C2D169D6F720065655C /* AppDelegate.m in Sources */,
 				59E22C39169D6F730065655C /* ViewController.m in Sources */,
+				59E22C41169D6FDB0065655C /* Block.m in Sources */,
+				59E22C46169D81EB0065655C /* Ball.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
