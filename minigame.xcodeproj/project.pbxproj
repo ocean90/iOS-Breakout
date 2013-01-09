@@ -307,6 +307,7 @@
 				59E22C3E169D6F730065655C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

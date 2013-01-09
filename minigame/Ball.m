@@ -26,8 +26,8 @@
 		
 		_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(ballMoving:)];
 		_displayLink.paused = YES;
-		[_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 		_displayLink.frameInterval = 5;
+		[_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 		
 		// We want only a 45 grad left and right
 		double startDirection = (arc4random() % 90) + 45;
@@ -50,26 +50,68 @@
 	CGFloat x = self.center.x + _velocityX * displayLink.duration * displayLink.frameInterval;
 	CGFloat y = self.center.y - _velocityY * displayLink.duration * displayLink.frameInterval;
 	
-	CGRect ballRect = self.frame;
-	CGRect boxRect = self.superview.bounds;
-	
-	if (CGRectGetMinX(ballRect) < CGRectGetMinX(boxRect)) {
-		_velocityX = -_velocityX;
-	}
-	if (CGRectGetMaxX(ballRect) > CGRectGetMaxX(boxRect)) {
-		_velocityX = -_velocityX;
-	}
-	if (CGRectGetMinY(ballRect) < CGRectGetMinY(boxRect)) {
+	CGRect rect1 = self.frame;
+	CGRect rect2 = self.superview.bounds;
+
+	if ( [self checkTopCollisionOf:rect1 in:rect2] ) {
 		_velocityY = -_velocityY;
-	}
-	if (CGRectGetMaxY(ballRect) < CGRectGetMaxY(boxRect)) {
+	};
+
+	if ( [self checkBottomCollisionOf:rect1 in:rect2] ) {
 		_velocityY = -_velocityY;
-	}
-	
+	};
+
+	if ( [self checkLeftCollisionOf:rect1 in:rect2] ) {
+		_velocityX = -_velocityX;
+	};
+
+	if ( [self checkRightCollisionOf:rect1 in:rect2] ) {
+		_velocityX = -_velocityX;
+	};
+
+	/*if ( ! CGRectIntersectsRect( self.superview.bounds, self.frame ) ) {
+		NSLog(@"Intersection: %@", NSStringFromCGRect( CGRectIntersection( self.superview.bounds, self.frame ) ));
+		[self stop];
+	}*/
+
 	self.center = CGPointMake(x, y);
 }
 		
 		
+
+- (BOOL) checkTopCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
+	CGFloat point1 = CGRectGetMinY(rect1);
+	CGFloat point2 = CGRectGetMinY(rect2);
+	NSLog(@"%f - %f", point1, point2);
+
+	return point2 >= point1;
+}
+
+- (BOOL) checkBottomCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
+	CGFloat point1 = CGRectGetMaxY(rect1);
+	CGFloat point2 = CGRectGetMaxY(rect2);
+	NSLog(@"%f - %f", point1, point2);
+
+	return point2 <= point1;
+}
+
+- (BOOL) checkRightCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
+	CGFloat point1 = CGRectGetMaxX(rect1);
+	CGFloat point2 = CGRectGetMaxX(rect2);
+
+	NSLog(@"%f - %f", point1, point2);
+
+	return point2 <= point1;
+}
+
+- (BOOL) checkLeftCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
+	CGFloat point1 = CGRectGetMinX(rect1);
+	CGFloat point2 = CGRectGetMinX(rect2);
+
+	NSLog(@"%f - %f", point1, point2);
+
+	return point2 >= point1;
+}
 
 - (void) start {
 	NSLog(@"Start game");
