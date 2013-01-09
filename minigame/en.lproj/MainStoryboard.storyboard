@@ -30,7 +30,7 @@
                                     <outletCollection property="gestureRecognizers" destination="AZ2-qa-71i" appends="YES" id="Aek-NA-fy2"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" id="Zqp-Qt-rNm" userLabel="Handler">
+                            <view contentMode="scaleToFill" id="Zqp-Qt-rNm" userLabel="Handler" customClass="Handler">
                                 <rect key="frame" x="190" y="295" width="100" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.74510848519999995" green="0.0" blue="0.0218809396" alpha="1" colorSpace="calibratedRGB"/>
@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="ball" destination="bbA-b3-TaB" id="uga-aU-OQP"/>
                         <outlet property="blocks" destination="C6e-zC-vRh" id="n1q-6Q-P0x"/>
+                        <outlet property="handler" destination="Zqp-Qt-rNm" id="yXD-Be-tFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -71,6 +72,28 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="Ball" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Ball.h"/>
+        </class>
+        <class className="Block" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Block.h"/>
+        </class>
+        <class className="Handler" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Handler.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ballTapped:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="action" name="handlerMoved:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="stopGame:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="ball" candidateClass="Ball"/>
+                <relationship kind="outlet" name="blocks" candidateClass="Block"/>
+                <relationship kind="outlet" name="handler" candidateClass="Handler"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

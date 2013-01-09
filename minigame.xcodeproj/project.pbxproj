@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		599AB535169DB9E8003B5300 /* Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 599AB534169DB9E8003B5300 /* Handler.m */; };
 		59E22C1D169D6F720065655C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C1C169D6F720065655C /* UIKit.framework */; };
 		59E22C1F169D6F720065655C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C1E169D6F720065655C /* Foundation.framework */; };
 		59E22C21169D6F720065655C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C20169D6F720065655C /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		599AB533169DB9E8003B5300 /* Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Handler.h; sourceTree = "<group>"; };
+		599AB534169DB9E8003B5300 /* Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Handler.m; sourceTree = "<group>"; };
 		59E22C18169D6F720065655C /* minigame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minigame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E22C1C169D6F720065655C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59E22C1E169D6F720065655C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 				59E22C2C169D6F720065655C /* AppDelegate.m */,
 				59E22C3F169D6FDB0065655C /* Block.h */,
 				59E22C40169D6FDB0065655C /* Block.m */,
+				599AB533169DB9E8003B5300 /* Handler.h */,
+				599AB534169DB9E8003B5300 /* Handler.m */,
 				59E22C44169D81EB0065655C /* Ball.h */,
 				59E22C45169D81EB0065655C /* Ball.m */,
 				59E22C37169D6F730065655C /* ViewController.h */,
@@ -192,6 +197,7 @@
 				59E22C39169D6F730065655C /* ViewController.m in Sources */,
 				59E22C41169D6FDB0065655C /* Block.m in Sources */,
 				59E22C46169D81EB0065655C /* Ball.m in Sources */,
+				599AB535169DB9E8003B5300 /* Handler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

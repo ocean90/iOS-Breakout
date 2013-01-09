@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController {
+	CADisplayLink *_displayLink;
 	CGFloat windowWidth;
 	CGFloat marginTop;
 	CGFloat marginLeft;
@@ -25,6 +28,12 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(runGameLoop:)];
+	_displayLink.paused = YES;
+	//_displayLink.frameInterval = 0;
+	[_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+	
+
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	
 	// TODO bessere variante ?
@@ -55,8 +64,12 @@
 	
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+
+}
+
 - (IBAction)ballTapped:(UITapGestureRecognizer *)sender {
-	// TODO wenn gestartet stoppen
+	_displayLink.paused = NO;
 	[self.ball start];
 }
 
@@ -89,5 +102,13 @@
 - (IBAction)stopGame:(UITapGestureRecognizer *)sender {
 	[self.ball stop];
 }
+
+- (void)runGameLoop:(CADisplayLink *)displayLink {
+	[self.ball ballMoving:displayLink];
+	if ([self.handler checkCollision:self.ball]) {
+		[self.ball inverseY];
+	}
+}
+
 
 @end

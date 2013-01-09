@@ -10,6 +10,7 @@
 
 @interface Ball : UIView
 
+- (void) inverseY;
 - (void) start;
 - (void) pause;
 - (void) stop;
@@ -17,5 +18,6 @@
 - (BOOL) checkBottomCollisionOf:(CGRect)rect1 in:(CGRect)rect2;
 - (BOOL) checkRightCollisionOf:(CGRect)rect1 in:(CGRect)rect2;
 - (BOOL) checkLeftCollisionOf:(CGRect)rect1 in:(CGRect)rect2;
+- (void)ballMoving:(CADisplayLink *)displayLink;
 
 @end

@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Block.h"
 #import "Ball.h"
+#import "Handler.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet Block *blocks;
 @property (weak, nonatomic) IBOutlet Ball *ball;
+@property (weak, nonatomic) IBOutlet Handler *handler;
 
 - (IBAction)ballTapped:(UITapGestureRecognizer *)sender;
 - (IBAction)handlerMoved:(UIPanGestureRecognizer *)sender;
