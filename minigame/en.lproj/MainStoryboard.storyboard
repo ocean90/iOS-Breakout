@@ -22,7 +22,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="bbA-b3-TaB" userLabel="Ball" customClass="Ball">
-                                <rect key="frame" x="230" y="264" width="20" height="20"/>
+                                <rect key="frame" x="230" y="274" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.2470588386" green="0.55294120309999995" blue="0.42352944609999998" alpha="1" colorSpace="deviceRGB"/>
                                 <gestureRecognizers/>
@@ -30,6 +30,41 @@
                                     <outletCollection property="gestureRecognizers" destination="AZ2-qa-71i" appends="YES" id="Aek-NA-fy2"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mp9-pt-bdL">
+                                <rect key="frame" x="404" y="0.0" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bGs-QX-w1J">
+                                <rect key="frame" x="446" y="0.0" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="♥" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tt3-ZE-SeC">
+                                <rect key="frame" x="3" y="0.0" width="22" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="♥" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="665-4L-lA7">
+                                <rect key="frame" x="20" y="0.0" width="22" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="♥" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cVD-Pv-POH">
+                                <rect key="frame" x="37" y="0.0" width="22" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" id="Zqp-Qt-rNm" userLabel="Handler" customClass="Handler">
                                 <rect key="frame" x="190" y="295" width="100" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -52,6 +87,7 @@
                         <outlet property="ball" destination="bbA-b3-TaB" id="uga-aU-OQP"/>
                         <outlet property="blocks" destination="C6e-zC-vRh" id="n1q-6Q-P0x"/>
                         <outlet property="handler" destination="Zqp-Qt-rNm" id="yXD-Be-tFF"/>
+                        <outlet property="points" destination="bGs-QX-w1J" id="Gw2-JH-b6p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -96,6 +132,7 @@
                 <relationship kind="outlet" name="ball" candidateClass="Ball"/>
                 <relationship kind="outlet" name="blocks" candidateClass="Block"/>
                 <relationship kind="outlet" name="handler" candidateClass="Handler"/>
+                <relationship kind="outlet" name="points" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

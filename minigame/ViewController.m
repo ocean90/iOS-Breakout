@@ -37,11 +37,11 @@
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	
 	// TODO bessere variante ?
-	int rowCount = 5;
+	int rowCount = 6;
 	int boxCount = 10;
 	
 	windowWidth = self.view.frame.size.height;
-	marginTop = 10;
+	marginTop = 20;
 	marginLeft = 10;
 	marginRight = 10;
 	padding = 10;

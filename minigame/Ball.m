@@ -59,13 +59,13 @@
 - (BOOL) checkTopCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
 	CGFloat point1 = CGRectGetMinY(rect1);
 	CGFloat point2 = CGRectGetMinY(rect2);
-	return point1 < point2;
+	return point1 <= point2;
 }
 
 - (BOOL) checkBottomCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
 	CGFloat point1 = CGRectGetMaxY(rect1);
 	CGFloat point2 = CGRectGetMaxY(rect2);
-	return point1 > point2;
+	return point1 >= point2;
 }
 
 - (BOOL) checkRightCollisionOf:(CGRect)rect1 in:(CGRect)rect2 {
