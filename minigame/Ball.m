@@ -14,6 +14,7 @@
 	CGPoint _startPoint;
 	CGFloat _velocityX;
 	CGFloat _velocityY;
+	CGFloat _speed;
 	CADisplayLink *_displayLink;
 }
 
@@ -23,6 +24,7 @@
 		self.layer.cornerRadius = 10;
 		
 		_startPoint = self.center;
+		_speed = 150.0;
 	}
 	
 	return self;
@@ -81,11 +83,29 @@
 }
 
 - (void) inverseY {
-	_velocityY = -_velocityY;
+	double cheatDirection = (arc4random() % 90) + 45;
+	cheatDirection = cheatDirection * 3.14 / 180;
+
+	CGFloat __velocityY = abs(sin(cheatDirection) * _speed);
+
+	if ( _velocityY < 0 ) {
+		_velocityY = __velocityY;
+	} else {
+		_velocityY = -__velocityY;
+	}
 }
 
 - (void) inverseX {
-	_velocityX = -_velocityX;
+	double cheatDirection = (arc4random() % 90) + 45;
+	cheatDirection = cheatDirection * 3.14 / 180;
+
+	CGFloat __velocityX = abs(sin(cheatDirection) * _speed);
+
+	if ( _velocityX < 0 ) {
+		_velocityX = __velocityX;
+	} else {
+		_velocityX = -__velocityX;
+	}
 }
 
 - (void) start {
@@ -99,8 +119,8 @@
 	NSLog(@"x = sin %lf", cos(startDirection));
 	NSLog(@"y = cos %lf", sin(startDirection));
 	
-	_velocityX = cos(startDirection) * 200.0;
-	_velocityY = sin(startDirection) * 200.0;
+	_velocityX = cos(startDirection) * _speed;
+	_velocityY = sin(startDirection) * _speed;
 	NSLog(@"init velocity: %f %f", _velocityX, _velocityY);
 }
 
