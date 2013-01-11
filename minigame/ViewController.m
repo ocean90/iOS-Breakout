@@ -60,8 +60,6 @@
 			[self.blocks addSubview:block];
 		}
 	}
-	
-	
 }
 
 
@@ -108,6 +106,8 @@
 	if ([self.handler checkCollision:self.ball]) {
 		[self.ball inverseY];
 	}
+
+	[self.ball updateBallPosition];
 }
 
 

@@ -11,6 +11,8 @@
 @interface Ball : UIView
 
 - (void) inverseY;
+- (void) inverseX;
+- (void) updateBallPosition;
 - (void) start;
 - (void) pause;
 - (void) stop;

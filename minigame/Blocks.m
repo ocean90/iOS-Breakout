@@ -19,15 +19,25 @@
 		CGRect blockRect = block.frame;
 
 		if ( CGRectIntersectsRect(ballRect, blockRect) ) {
-			[UIView animateWithDuration:1.0
+			[UIView animateWithDuration:0.2
 							 animations:^{
-								 [block setAlpha:0.0f]; // Doesn't work?
-								 [block setCenter:CGPointMake(block.center.x, 500)];
+								 [block setAlpha:0.0f];
 							 }
 							 completion:^(BOOL finished){ [block removeFromSuperview]; }];
 
-		}
+			// Top and bottom
+			if ( CGRectGetMaxY(ballRect) >= CGRectGetMinY(blockRect)) {
+				[ball inverseY];
+			}
 
+			// Right and left
+			if ( CGRectGetMaxX(ballRect) >= CGRectGetMinX(blockRect)) {
+				[ball inverseX];
+			}
+
+			
+		}
+		
 	}
 }
 

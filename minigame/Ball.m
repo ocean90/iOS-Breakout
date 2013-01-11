@@ -36,20 +36,23 @@
 	CGRect boxRect = self.superview.bounds;
 
 	if ( [self checkTopCollisionOf:ballRect in:boxRect] ) {
-		_velocityY = -_velocityY;
+		[self inverseY];
 	} else if ( [self checkBottomCollisionOf:ballRect in:boxRect] ) {
 		[self stop];
 	}
 	
 	if ( [self checkLeftCollisionOf:ballRect in:boxRect] ) {
-		_velocityX = -_velocityX;
+		[self inverseX];
 	} else if ( [self checkRightCollisionOf:ballRect in:boxRect] ) {
-		_velocityX = -_velocityX;
+		[self inverseX];
 	};
 
+}
+
+- (void) updateBallPosition {
 	CGFloat x = _velocityX * _displayLink.duration * _displayLink.frameInterval;
 	CGFloat y = -_velocityY * _displayLink.duration * _displayLink.frameInterval;
-	
+
 	self.frame = CGRectOffset(self.frame, x, y);
 }
 
@@ -81,6 +84,10 @@
 	_velocityY = -_velocityY;
 }
 
+- (void) inverseX {
+	_velocityX = -_velocityX;
+}
+
 - (void) start {
 	NSLog(@"Start game");
 	
@@ -92,8 +99,8 @@
 	NSLog(@"x = sin %lf", cos(startDirection));
 	NSLog(@"y = cos %lf", sin(startDirection));
 	
-	_velocityX = cos(startDirection) * 80.0;
-	_velocityY = sin(startDirection) * 80.0;
+	_velocityX = cos(startDirection) * 200.0;
+	_velocityY = sin(startDirection) * 200.0;
 	NSLog(@"init velocity: %f %f", _velocityX, _velocityY);
 }
 
