@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="C6e-zC-vRh" userLabel="Blocks" customClass="Blocks">
+                            <view contentMode="scaleToFill" id="C6e-zC-vRh" userLabel="Blocks" customClass="Block">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -22,7 +22,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" id="bbA-b3-TaB" userLabel="Ball" customClass="Ball">
-                                <rect key="frame" x="230" y="274" width="20" height="20"/>
+                                <rect key="frame" x="230" y="270" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.2470588386" green="0.55294120309999995" blue="0.42352944609999998" alpha="1" colorSpace="deviceRGB"/>
                                 <gestureRecognizers/>
@@ -83,7 +83,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="allBlocks" destination="C6e-zC-vRh" id="Jkz-2P-vQY"/>
                         <outlet property="ball" destination="bbA-b3-TaB" id="uga-aU-OQP"/>
                         <outlet property="blocks" destination="C6e-zC-vRh" id="n1q-6Q-P0x"/>
                         <outlet property="handler" destination="Zqp-Qt-rNm" id="yXD-Be-tFF"/>
@@ -116,9 +115,6 @@
         <class className="Block" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Block.h"/>
         </class>
-        <class className="Blocks" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Blocks.h"/>
-        </class>
         <class className="Handler" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Handler.h"/>
         </class>
@@ -128,7 +124,6 @@
                 <relationship kind="action" name="ballTapped:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="action" name="handlerMoved:" candidateClass="UIPanGestureRecognizer"/>
                 <relationship kind="action" name="stopGame:" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="outlet" name="allBlocks" candidateClass="Blocks"/>
                 <relationship kind="outlet" name="ball" candidateClass="Ball"/>
                 <relationship kind="outlet" name="blocks" candidateClass="Block"/>
                 <relationship kind="outlet" name="handler" candidateClass="Handler"/>

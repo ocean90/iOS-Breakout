@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ball.h"
 
 @interface Block : UIView
+- (void) checkBlockCollisionWith:(Ball *)ball;
 
 @end

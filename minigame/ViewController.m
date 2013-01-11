@@ -101,7 +101,7 @@
 - (void)runGameLoop:(CADisplayLink *)displayLink {
 	[self.ball ballMoving:displayLink];
 
-	[self.allBlocks checkBlockCollisionWith:self.ball];
+	[self.blocks checkBlockCollisionWith:self.ball];
 
 	if ([self.handler checkCollision:self.ball]) {
 		[self.ball inverseY];

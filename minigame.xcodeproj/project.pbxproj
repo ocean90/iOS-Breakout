@@ -22,7 +22,6 @@
 		59E22C41169D6FDB0065655C /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C40169D6FDB0065655C /* Block.m */; };
 		59E22C43169D7FC70065655C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E22C42169D7FC70065655C /* QuartzCore.framework */; };
 		59E22C46169D81EB0065655C /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E22C45169D81EB0065655C /* Ball.m */; };
-		B48AB3CC16A0731100C847E3 /* Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = B48AB3CB16A0731100C847E3 /* Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +48,6 @@
 		59E22C42169D7FC70065655C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		59E22C44169D81EB0065655C /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
 		59E22C45169D81EB0065655C /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
-		B48AB3CA16A0731100C847E3 /* Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blocks.h; sourceTree = "<group>"; };
-		B48AB3CB16A0731100C847E3 /* Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blocks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +104,6 @@
 				599AB534169DB9E8003B5300 /* Handler.m */,
 				59E22C44169D81EB0065655C /* Ball.h */,
 				59E22C45169D81EB0065655C /* Ball.m */,
-				B48AB3CA16A0731100C847E3 /* Blocks.h */,
-				B48AB3CB16A0731100C847E3 /* Blocks.m */,
 				59E22C37169D6F730065655C /* ViewController.h */,
 				59E22C38169D6F730065655C /* ViewController.m */,
 				59E22C34169D6F730065655C /* MainStoryboard.storyboard */,
@@ -203,7 +198,6 @@
 				59E22C41169D6FDB0065655C /* Block.m in Sources */,
 				59E22C46169D81EB0065655C /* Ball.m in Sources */,
 				599AB535169DB9E8003B5300 /* Handler.m in Sources */,
-				B48AB3CC16A0731100C847E3 /* Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
