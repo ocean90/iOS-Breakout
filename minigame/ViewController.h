@@ -10,9 +10,11 @@
 #import "Block.h"
 #import "Ball.h"
 #import "Handler.h"
+#import "Blocks.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet Blocks *allBlocks;
 @property (weak, nonatomic) IBOutlet Block *blocks;
 @property (weak, nonatomic) IBOutlet Ball *ball;
 @property (weak, nonatomic) IBOutlet Handler *handler;

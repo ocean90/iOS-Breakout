@@ -30,7 +30,7 @@
 	
 	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(runGameLoop:)];
 	_displayLink.paused = YES;
-	//_displayLink.frameInterval = 0;
+
 	[_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 	
 
@@ -78,7 +78,7 @@
     }
 	
 	if (sender.state == UIGestureRecognizerStateEnded) {
-		CGPoint p = [sender velocityInView:sender.view];
+		//CGPoint p = [sender velocityInView:sender.view];
 		[UIView animateWithDuration:1 animations:^{
 			// TODO
 		}];
@@ -102,10 +102,15 @@
 
 - (void)runGameLoop:(CADisplayLink *)displayLink {
 	[self.ball ballMoving:displayLink];
+
+	[self.allBlocks checkBlockCollisionWith:self.ball];
+
 	if ([self.handler checkCollision:self.ball]) {
 		[self.ball inverseY];
 	}
 }
+
+
 
 
 @end
