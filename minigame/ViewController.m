@@ -60,6 +60,10 @@
 			[self.blocks addSubview:block];
 		}
 	}
+
+	self.blocks.controller = self;
+
+	
 }
 
 

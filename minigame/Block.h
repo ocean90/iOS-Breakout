@@ -10,6 +10,7 @@
 #import "Ball.h"
 
 @interface Block : UIView
-- (void) checkBlockCollisionWith:(Ball *)ball;
 
+- (void) checkBlockCollisionWith:(Ball *)ball;
+@property (weak, nonatomic) UIViewController *controller;
 @end

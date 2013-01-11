@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet Ball *ball;
 @property (weak, nonatomic) IBOutlet Handler *handler;
 @property (weak, nonatomic) IBOutlet UILabel *points;
+@property (weak, nonatomic) IBOutlet UILabel *timer;
 
 - (IBAction)ballTapped:(UITapGestureRecognizer *)sender;
 - (IBAction)handlerMoved:(UIPanGestureRecognizer *)sender;

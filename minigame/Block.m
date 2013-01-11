@@ -7,18 +7,11 @@
 //
 
 #import "Block.h"
+#import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation Block
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
 
 - (id)init
 {
@@ -59,6 +52,9 @@
 				[ball inverseX];
 			}
 
+			UILabel *points = ((ViewController *)self.controller).points;
+			int oldPoints = [points.text intValue];
+			points.text = [NSString stringWithFormat:@"%d", oldPoints + 1];
 
 		}
 		
